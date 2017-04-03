@@ -1,0 +1,751 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="WordAlignment,GIZA++," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="##GIZA++ 参数说明 
+1.  下载GIZA++2.  准备语料，这里使用的是NiuTrans 里面 经过乱码过滤及数据预处理过后的sample中的数据。3.  在linux环境下，gcc版本为4.8.1 （可用gcc -v 查询）4.  解压所下载的GIZA++，我的版本为giza-pp-v1.0.7，发现其中有两个文件夹，其中mkcls是用于生成word class的。5. 对其进行编译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GIZA++参数说明">
+<meta property="og:url" content="http://yoursite.com/2015/03/29/GIZA-参数说明/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##GIZA++ 参数说明 
+1.  下载GIZA++2.  准备语料，这里使用的是NiuTrans 里面 经过乱码过滤及数据预处理过后的sample中的数据。3.  在linux环境下，gcc版本为4.8.1 （可用gcc -v 查询）4.  解压所下载的GIZA++，我的版本为giza-pp-v1.0.7，发现其中有两个文件夹，其中mkcls是用于生成word class的。5. 对其进行编译">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img1.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img2.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img3.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img4.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img5.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img6.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img7.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img8.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img9.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img10.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img11.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img12.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img14.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img15.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img16.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img17.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img18.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img19.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img20.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img21.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img22.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img23.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img24.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img25.png">
+<meta property="og:image" content="http://yoursite.com/img/GIZA++_img26.png">
+<meta property="og:updated_time" content="2015-03-30T15:51:04.569Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GIZA++参数说明">
+<meta name="twitter:description" content="##GIZA++ 参数说明 
+1.  下载GIZA++2.  准备语料，这里使用的是NiuTrans 里面 经过乱码过滤及数据预处理过后的sample中的数据。3.  在linux环境下，gcc版本为4.8.1 （可用gcc -v 查询）4.  解压所下载的GIZA++，我的版本为giza-pp-v1.0.7，发现其中有两个文件夹，其中mkcls是用于生成word class的。5. 对其进行编译">
+<meta name="twitter:image" content="http://yoursite.com/img/GIZA++_img1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/03/29/GIZA-参数说明/"/>
+
+
+
+
+
+  <title> GIZA++参数说明 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/03/29/GIZA-参数说明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                GIZA++参数说明
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-03-29T10:46:23+08:00">
+                2015-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>##GIZA++ 参数说明 </p>
+<p><strong>1.  下载GIZA++</strong><br><strong>2.  准备语料，这里使用的是NiuTrans 里面 经过乱码过滤及数据预处理过后的sample中的数据。</strong><br><strong>3.  在linux环境下，gcc版本为4.8.1 （可用gcc -v 查询）</strong><br><strong>4.  解压所下载的GIZA++，我的版本为giza-pp-v1.0.7，发现其中有两个文件夹，其中mkcls是用于生成word class的。</strong><br><img src="/img/GIZA++_img1.png" alt="GIZA++_img1"><br><img src="/img/GIZA++_img2.png" alt="GIZA++_img2"><br><strong>5. 对其进行编译，新建一文件夹“tool”，并将生成的GIZA++-v2目录下的“GIZA++”，“snt2cooc.out”,“plain2snt.out”以及 mkcls-v2目录下的“mkcls”拷贝到tool下，并将准备好的语料也放入这个文件夹。</strong><br><img src="/img/GIZA++_img3.png" alt="GIZA++_img3"><br><img src="/img/GIZA++_img4.png" alt="GIZA++_img4"><br><strong>6.使用plain2snt.out 将 普通文本转化成GIZA++格式的文本。</strong><br><img src="/img/GIZA++_img5.png" alt="GIZA++_img5"><br><img src="/img/GIZA++_img6.png" alt="GIZA++_img6"><br>此时，tool文件夹下有如下内容：<br><img src="/img/GIZA++_img7.png" alt="GIZA++_img7"></p>
+<p>格式说明：</p>
+<p><em>ch.vcb (en.vcb)</em></p>
+<p>例子：<br><img src="/img/GIZA++_img8.png" alt="GIZA++_img8"></p>
+<p><em>ch_en.snt(en_ch.snt)</em></p>
+<p>每一个句子对都包括三行，第一行表示该句子对出现的次数，第二行表示源语言单词的ID序列（该例子中是中文即ch），第三行表示目标语言中的单词ID序列（该例子中是英文即en）</p>
+<p>例子：<br><img src="/img/GIZA++_img9.png" alt="GIZA++_img9"></p>
+<ul>
+<li>0 下标保留给特殊的 NULL</li>
+</ul>
+<p><strong>7. 运行 snt2cooc.out 获得共线文件。</strong></p>
+<p><img src="/img/GIZA++_img10.png" alt="GIZA++_img10"></p>
+<p>生成了 ：</p>
+<p><img src="/img/GIZA++_img11.png" alt="GIZA++_img11"></p>
+<p>格式说明：</p>
+<p><em>ch_en.cooc(en_ch.cooc)</em><br>包含所有可能的单词对。（按源句子字符串ID排列）</p>
+<ul>
+<li>注：一个单词能与另一个单词形成单词对的规则是两个单词都在一个句子对里。如果一个单词和另一个单词从未在句子对中出现过，则不构成单词对。比如3 乌鲁木齐 1 只在第一个句子对中出现过，所以它只能与第一个句子对中的目标句子字符串形成单词对。</li>
+</ul>
+<p>例子：</p>
+<p><img src="/img/GIZA++_img12.png" alt="GIZA++_img12"></p>
+<p><strong>8.  使用mkcls进行词语聚类</strong></p>
+<p>参数设置：<br>-n:表示训练迭代次数，默认为1<br>-p: 需要聚类的已分词文本<br>-V:输出信息<br>opt：优化运行<br>（注意参数与后面的值之间没有空格）</p>
+<p><img src="/img/GIZA++_img14.png" alt="GIZA++_img14"></p>
+<p>生成文件：</p>
+<p><img src="/img/GIZA++_img15.png" alt="GIZA++_img15"></p>
+<p><em>ch.classes (en.classes)</em><br>例子：</p>
+<p><img src="/img/GIZA++_img16.png" alt="GIZA++_img16"></p>
+<p><em>ch.classes.cats  (en.classes.cats)</em></p>
+<p><img src="/img/GIZA++_img17.png" alt="GIZA++_img17"></p>
+<p><strong>9.接下来运行GIZA++实现对齐操作</strong><br><img src="/img/GIZA++_img18.png" alt="GIZA++_img18"></p>
+<p>参数设置：<br>-m1 IBM 模型1的迭代次数。<br>-m2 IBM 模型2的迭代次数。<br>-m3 IBM 模型3的迭代次数。<br>-m4 IBM 模型4的迭代次数。<br>-m5 IBM 模型5的迭代次数。<br>-mh HMM 模型的迭代次数。<br>-CocurrenceFile  是一个特殊文件，包括所有可能的词汇对<br>-d 词典文件的位置(注意此处的词典应该是每个词的ID都有的，如果词典中没有的话，那么就取对空)<br>-s 源句子的词汇表<br>-t 目标句子的词汇表<br>-c 句子对的文件<br>-tc 测试文件<br>-o 输出文件的前缀<br>-nbestalignments 显示最好的n个对齐结果</p>
+<p>其中生成的文件有：</p>
+<p><img src="/img/GIZA++_img19.png" alt="GIZA++_img19"><br><img src="/img/GIZA++_img20.png" alt="GIZA++_img20"></p>
+<p>格式说明：</p>
+<p><em>c2e.a3.final</em><br> 每一行的文件格式如下所示。<br> i  j  l m p(i|j,l,m)<br> 其中代表的意义为：<br> j = 在目标句子中的位置<br> i = 在源句子中的位置<br> l = 源句子的长度<br> m =  目标句子的长度</p>
+<p> 例子：</p>
+<p><img src="/img/GIZA++_img21.png" alt="GIZA++_img21"></p>
+<p><em>c2e.A3.final</em><br>对齐文件<br>格式如下：<br><img src="/img/GIZA++_img22.png" alt="GIZA++_img22"><br>*花括号里表示的是该词对应的句子中的词的下标。</p>
+<p><em>c2e.d3.final</em></p>
+<p>每一行的文件格式如下所示。<br>j  i  l m p(i|j,l,m)<br>(与a只有一点不同，即j与i交换了位置)</p>
+<p>例子：</p>
+<p><img src="/img/GIZA++_img23.png" alt="GIZA++_img23"></p>
+<p><em>c2e.d4.final</em><br>Translation tables for Model 4</p>
+<p><em>c2e.D4.final</em><br>IBM Model4 的 distortion 表</p>
+<p><em>c2e.Decoder.config</em><br>用与ISI Rewrite Decoder 解码器</p>
+<p><em>c2e.gizacfg</em><br>包含了GIZA++的这次训练中所有参数的设定。在做同样的训练时可以用到。</p>
+<p><em>c2e.n3.final</em><br>(Fertility  table)<br>一个单词能够对应多少个词的概率。<br>格式为<br>source_token_id  p0 p1 p2 ….. pn<br>p0 是该词一个词都不对应的概率。</p>
+<p>例子：<br><img src="/img/GIZA++_img24.png" alt="GIZA++_img24"></p>
+<p><em>c2e.p0_3.final</em><br>这个文件只包含一个实数，即不插入空值的概率。</p>
+<p><em>c2e.perp</em><br>训练的最后产生，概括了每次迭代的困惑度值。</p>
+<p>例子：<br><img src="/img/GIZA++_img25.png" alt="GIZA++_img25"></p>
+<p><em>c2e.t3.final</em><br>(translation table)</p>
+<p>例子：<br><img src="/img/GIZA++_img26.png" alt="GIZA++_img26"></p>
+<p><em>c2e.trn.src.vcb c2e.trn.trg.vcb</em><br>类似于ch.vcb en.vcb 但是更准确。</p>
+<p><em>c2e.tst.src.vcb c2e.tst.trg.vcb</em><br>空文件</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/WordAlignment/" rel="tag"># WordAlignment</a>
+          
+            <a href="/tags/GIZA/" rel="tag"># GIZA++</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/03/01/基于HMM的词性标注/" rel="next" title="基于HMM的词性标注">
+                <i class="fa fa-chevron-left"></i> 基于HMM的词性标注
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/26/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

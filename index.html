@@ -1,0 +1,895 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NLP, Machine Translation, Drockser" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="This Web Try explan my work in MT">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Drockser's Blog">
+<meta property="og:url" content="http://drockser.com/index.html">
+<meta property="og:site_name" content="Drockser's Blog">
+<meta property="og:description" content="This Web Try explan my work in MT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Drockser's Blog">
+<meta name="twitter:description" content="This Web Try explan my work in MT">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://drockser.com/"/>
+
+
+
+
+
+  <title> Drockser's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Drockser's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Machine Translation</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://drockser.com/GIZA-参数说明/2015/03/29/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Drockser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Drockser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/GIZA-参数说明/2015/03/29/" itemprop="url">
+                  GIZA++参数说明
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-03-29T10:46:23+08:00">
+                2015-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##GIZA++ 参数说明 </p>
+<p><strong>1.  下载GIZA++</strong><br><strong>2.  准备语料，这里使用的是NiuTrans 里面 经过乱码过滤及数据预处理过后的sample中的数据。</strong><br><strong>3.  在linux环境下，gcc版本为4.8.1 （可用gcc -v 查询）</strong><br><strong>4.  解压所下载的GIZA++，我的版本为giza-pp-v1.0.7，发现其中有两个文件夹，其中mkcls是用于生成word class的。</strong><br><img src="/img/GIZA++_img1.png" alt="GIZA++_img1"><br><img src="/img/GIZA++_img2.png" alt="GIZA++_img2"><br><strong>5. 对其进行编译，新建一文件夹“tool”，并将生成的GIZA++-v2目录下的“GIZA++”，“snt2cooc.out”,“plain2snt.out”以及 mkcls-v2目录下的“mkcls”拷贝到tool下，并将准备好的语料也放入这个文件夹。</strong><br><img src="/img/GIZA++_img3.png" alt="GIZA++_img3"><br><img src="/img/GIZA++_img4.png" alt="GIZA++_img4"><br><strong>6.使用plain2snt.out 将 普通文本转化成GIZA++格式的文本。</strong><br><img src="/img/GIZA++_img5.png" alt="GIZA++_img5"><br><img src="/img/GIZA++_img6.png" alt="GIZA++_img6"><br>此时，tool文件夹下有如下内容：<br><img src="/img/GIZA++_img7.png" alt="GIZA++_img7"></p>
+<p>格式说明：</p>
+<p><em>ch.vcb (en.vcb)</em></p>
+<p>例子：<br><img src="/img/GIZA++_img8.png" alt="GIZA++_img8"></p>
+<p><em>ch_en.snt(en_ch.snt)</em></p>
+<p>每一个句子对都包括三行，第一行表示该句子对出现的次数，第二行表示源语言单词的ID序列（该例子中是中文即ch），第三行表示目标语言中的单词ID序列（该例子中是英文即en）</p>
+<p>例子：<br><img src="/img/GIZA++_img9.png" alt="GIZA++_img9"></p>
+<ul>
+<li>0 下标保留给特殊的 NULL</li>
+</ul>
+<p><strong>7. 运行 snt2cooc.out 获得共线文件。</strong></p>
+<p><img src="/img/GIZA++_img10.png" alt="GIZA++_img10"></p>
+<p>生成了 ：</p>
+<p><img src="/img/GIZA++_img11.png" alt="GIZA++_img11"></p>
+<p>格式说明：</p>
+<p><em>ch_en.cooc(en_ch.cooc)</em><br>包含所有可能的单词对。（按源句子字符串ID排列）</p>
+<ul>
+<li>注：一个单词能与另一个单词形成单词对的规则是两个单词都在一个句子对里。如果一个单词和另一个单词从未在句子对中出现过，则不构成单词对。比如3 乌鲁木齐 1 只在第一个句子对中出现过，所以它只能与第一个句子对中的目标句子字符串形成单词对。</li>
+</ul>
+<p>例子：</p>
+<p><img src="/img/GIZA++_img12.png" alt="GIZA++_img12"></p>
+<p><strong>8.  使用mkcls进行词语聚类</strong></p>
+<p>参数设置：<br>-n:表示训练迭代次数，默认为1<br>-p: 需要聚类的已分词文本<br>-V:输出信息<br>opt：优化运行<br>（注意参数与后面的值之间没有空格）</p>
+<p><img src="/img/GIZA++_img14.png" alt="GIZA++_img14"></p>
+<p>生成文件：</p>
+<p><img src="/img/GIZA++_img15.png" alt="GIZA++_img15"></p>
+<p><em>ch.classes (en.classes)</em><br>例子：</p>
+<p><img src="/img/GIZA++_img16.png" alt="GIZA++_img16"></p>
+<p><em>ch.classes.cats  (en.classes.cats)</em></p>
+<p><img src="/img/GIZA++_img17.png" alt="GIZA++_img17"></p>
+<p><strong>9.接下来运行GIZA++实现对齐操作</strong><br><img src="/img/GIZA++_img18.png" alt="GIZA++_img18"></p>
+<p>参数设置：<br>-m1 IBM 模型1的迭代次数。<br>-m2 IBM 模型2的迭代次数。<br>-m3 IBM 模型3的迭代次数。<br>-m4 IBM 模型4的迭代次数。<br>-m5 IBM 模型5的迭代次数。<br>-mh HMM 模型的迭代次数。<br>-CocurrenceFile  是一个特殊文件，包括所有可能的词汇对<br>-d 词典文件的位置(注意此处的词典应该是每个词的ID都有的，如果词典中没有的话，那么就取对空)<br>-s 源句子的词汇表<br>-t 目标句子的词汇表<br>-c 句子对的文件<br>-tc 测试文件<br>-o 输出文件的前缀<br>-nbestalignments 显示最好的n个对齐结果</p>
+<p>其中生成的文件有：</p>
+<p><img src="/img/GIZA++_img19.png" alt="GIZA++_img19"><br><img src="/img/GIZA++_img20.png" alt="GIZA++_img20"></p>
+<p>格式说明：</p>
+<p><em>c2e.a3.final</em><br> 每一行的文件格式如下所示。<br> i  j  l m p(i|j,l,m)<br> 其中代表的意义为：<br> j = 在目标句子中的位置<br> i = 在源句子中的位置<br> l = 源句子的长度<br> m =  目标句子的长度</p>
+<p> 例子：</p>
+<p><img src="/img/GIZA++_img21.png" alt="GIZA++_img21"></p>
+<p><em>c2e.A3.final</em><br>对齐文件<br>格式如下：<br><img src="/img/GIZA++_img22.png" alt="GIZA++_img22"><br>*花括号里表示的是该词对应的句子中的词的下标。</p>
+<p><em>c2e.d3.final</em></p>
+<p>每一行的文件格式如下所示。<br>j  i  l m p(i|j,l,m)<br>(与a只有一点不同，即j与i交换了位置)</p>
+<p>例子：</p>
+<p><img src="/img/GIZA++_img23.png" alt="GIZA++_img23"></p>
+<p><em>c2e.d4.final</em><br>Translation tables for Model 4</p>
+<p><em>c2e.D4.final</em><br>IBM Model4 的 distortion 表</p>
+<p><em>c2e.Decoder.config</em><br>用与ISI Rewrite Decoder 解码器</p>
+<p><em>c2e.gizacfg</em><br>包含了GIZA++的这次训练中所有参数的设定。在做同样的训练时可以用到。</p>
+<p><em>c2e.n3.final</em><br>(Fertility  table)<br>一个单词能够对应多少个词的概率。<br>格式为<br>source_token_id  p0 p1 p2 ….. pn<br>p0 是该词一个词都不对应的概率。</p>
+<p>例子：<br><img src="/img/GIZA++_img24.png" alt="GIZA++_img24"></p>
+<p><em>c2e.p0_3.final</em><br>这个文件只包含一个实数，即不插入空值的概率。</p>
+<p><em>c2e.perp</em><br>训练的最后产生，概括了每次迭代的困惑度值。</p>
+<p>例子：<br><img src="/img/GIZA++_img25.png" alt="GIZA++_img25"></p>
+<p><em>c2e.t3.final</em><br>(translation table)</p>
+<p>例子：<br><img src="/img/GIZA++_img26.png" alt="GIZA++_img26"></p>
+<p><em>c2e.trn.src.vcb c2e.trn.trg.vcb</em><br>类似于ch.vcb en.vcb 但是更准确。</p>
+<p><em>c2e.tst.src.vcb c2e.tst.trg.vcb</em><br>空文件</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://drockser.com/基于HMM的词性标注/2015/03/01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Drockser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Drockser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/基于HMM的词性标注/2015/03/01/" itemprop="url">
+                  基于HMM的词性标注
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-03-01T21:02:08+08:00">
+                2015-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>之前帮学长写了一个词性标注的小程序，使用的是CBT的语料。</p>
+<p>##语料的处理</p>
+<p>首先我们要对语料进行预处理，首先为了后面处理的方便我们需要将每一个词和词性映射到一个数字上，这个数字就作为后面数组的下标。</p>
+<p>词对应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">! 0</div><div class="line">$ 1</div><div class="line">* 2</div><div class="line">, 3</div><div class="line">,×ÐÓã 4</div><div class="line">- 5</div><div class="line">---- 6</div><div class="line">. 7</div><div class="line">/ 8</div><div class="line">// 9</div><div class="line">0.36 10</div><div class="line"></div><div class="line">...  ...</div><div class="line"></div><div class="line">魅力 34566</div><div class="line">魅影 34567</div><div class="line">飨 34568</div><div class="line">鬓 34569</div><div class="line">鬓影 34570</div><div class="line">麽 34571</div><div class="line">黯淡 34572</div><div class="line">黯然 34573</div><div class="line">黯然失色 34574</div><div class="line">黯哑 34575</div><div class="line">鼾声 34576</div></pre></td></tr></table></figure>
+<p>词性对应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">AD 1</div><div class="line">AS 2</div><div class="line">BA 3</div><div class="line">CC 4</div><div class="line">CD 5</div><div class="line">CS 6</div><div class="line">DEC 7</div><div class="line">DEG 8</div><div class="line">DER 9</div><div class="line">DEV 10</div><div class="line">DT 11</div><div class="line">ETC 12</div><div class="line">FW 13</div><div class="line">IJ 14</div><div class="line">JJ 15</div><div class="line">LB 16</div><div class="line">LC 17</div><div class="line">M 18</div><div class="line">MSP 19</div><div class="line">NN 20</div><div class="line">NP 21</div><div class="line">NR 22</div><div class="line">NT 23</div><div class="line">OD 24</div><div class="line">P 25</div><div class="line">PN 26</div><div class="line">PU 27</div><div class="line">SB 28</div><div class="line">SP 29</div><div class="line">VA 30</div><div class="line">VC 31</div><div class="line">VE 32</div><div class="line">VP 33</div><div class="line">VV 34</div><div class="line">X 35</div></pre></td></tr></table></figure>
+<p>这里面词性的下标不是从0开始的，这是因为0下标另有它用，它是作为开始标记的。</p>
+<p>同时我们要记录下前后相邻两个词性出现的次数，并计算概率，如果有两个词性从未前后出现过，那么进行平滑处理，这里简单的使用加一平滑的方法。</p>
+<p>计算相邻词性出现的概率</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">0 1 -2.23558</div><div class="line">0 2 -11.9889</div><div class="line">0 3 -8.05705</div><div class="line">0 4 -7.19309</div><div class="line">0 5 -3.65537</div><div class="line">0 6 -4.62941</div><div class="line">0 7 -11.9889</div><div class="line">0 8 -11.9889</div><div class="line">0 9 -11.9889</div><div class="line">0 10 -11.988</div><div class="line"></div><div class="line">... ... ...</div><div class="line"></div><div class="line">15 36 -11.6505</div><div class="line">16 36 -7.66153</div><div class="line">17 36 -6.72625</div><div class="line">18 36 -5.55195</div><div class="line">19 36 -9.34793</div><div class="line">20 36 -4.84458</div><div class="line">21 36 -4.17439</div><div class="line">22 36 -5.03365</div><div class="line">23 36 -6.07967</div><div class="line">24 36 -6.55278</div><div class="line">25 36 -11.9417</div><div class="line">26 36 -7.89508</div><div class="line">27 36 -1.55266</div><div class="line">28 36 -8.29029</div><div class="line">29 36 -8.2388</div><div class="line">30 36 -4.65352</div><div class="line">31 36 -10.7537</div><div class="line">32 36 -10.171</div><div class="line">33 36 -3.80666</div><div class="line">34 36 -5.29197</div><div class="line">35 36 -4.55388</div></pre></td></tr></table></figure>
+<p>前两位数值其中0表示开始符，36 表示结束符，1-35表示其代表的词性， 最后一位数值表示对概率取log值，这是为了方便后面的计算。因为如果是概率的话后面要乘起来会导致一个很小的数字，如果是取log值的话，那么后面只需要加起来就行了。</p>
+<p>除此之外，我们还要记录下一个词对应某个词性的概率。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">0 1 -12.7673</div><div class="line">0 2 -11.1551</div><div class="line">0 3 -10.6247</div><div class="line">0 4 -11.5087</div><div class="line">0 5 -12.0817</div><div class="line">0 6 -10.6544</div><div class="line">0 7 -11.88</div><div class="line">0 8 -11.8607</div><div class="line">0 9 -10.5118</div><div class="line">0 10 -10.5946</div><div class="line"></div><div class="line">... ... ...</div><div class="line"></div><div class="line">34576 25 -12.1446</div><div class="line">34576 26 -11.4176</div><div class="line">34576 27 -13.4684</div><div class="line">34576 28 -10.5591</div><div class="line">34576 29 -10.5539</div><div class="line">34576 30 -11.5412</div><div class="line">34576 31 -11.3065</div><div class="line">34576 32 -11.0133</div><div class="line">34576 33 -10.4512</div><div class="line">34576 34 -13.3737</div><div class="line">34576 35 -10.4527</div></pre></td></tr></table></figure>
+<p>其中第一位数值表示某个词对应的下标，第二位数值表示词性对应的下标，第三位数值表示对该词是该词性的概率取log值。</p>
+<p>语料处理完了以后，我们就应该进行词性标注的训练了，既然提起词性标注，就不得不说一说隐形马尔科夫了。</p>
+<p>##如何进行词性标注</p>
+<p>词性标注，一个简单的解释就是输入一行词序列，输出一行词性的序列，也就是说假设给定序列$x: x_1,x_2,\ldots,x_n$ ,那么我们就要输出序列$y: y_1,y_2,\ldots,y_n$<br>我们要做的很简单，给定x，那么每种可能的y（假设有一个集合Y包含每种可能的y）都会有一个相应的概率，$p(y|x)$ 。<br>对每个给我们的x，我们要做的就是求出使这个概率最大的y，也就是求$arg\underset{y\in\mathcal{Y}}{\max}\,p(y|x)$<br>根据条件概率公式有：$p(y|x) = \,{p(x,y) \over p(x)} = \,{p(y)p(x|y) \over p(x)}$<br>又因为x是给定的，所以p(x)是个定值。我们就能得出这样的式子。</p>
+<p>\begin{align}<br>f(x) &amp;= {arg\underset{y\in\mathcal{Y}}{\max}\,p(y|x)} \\<br>&amp;= {arg\underset{y\in\mathcal{Y}}{\max}\,{p(y)p(x|y) \over p(x)}} \\<br>&amp;= {arg\underset{y\in\mathcal{Y}}{\max}\,{p(y)p(x|y)}} \\<br>\end{align}</p>
+<p>现在我们简单的将词性标注问题转化成了求两个概率，一个是形成这一串词性的可能性$p(y)$，另一个是某个词性对应某个词的可能性，$p(x|y)$ 。<br>由乘法公式可得 $p(y) = p(y_1,y_2,\ldots,y_n) = p(y_1) \times p(y_2|y_1) \times p(y_3|y_2,y_1) \times \cdots \times p(y_n|y_1,y_2,\ldots,y_{n-1})$<br>但是这个式子太复杂了，如果这么求的话，那就太麻烦了，不如我们假设一下，一个词性只对下一个词性有影响，不影响其他的。(二元)<br>那么由马尔科夫假设知 $p(y) = p(y_1) \times p(y_2|y_1) \times p(y_3|y_2) \times \cdots \times p(y_n|y_{n-1})$<br>而对于$p(x|y)$ 我们简单的认为 $p(x|y) = p(x_1|y_1) \times p(x_2|y_2) \times \cdots \times p(x_n|y_n)$<br>现在问题就简单许多了，对于一个给定的分好词的句子x,和一个假设的y，我们可以得到<br>$p(x_1 \ldots x_n,y_1 \ldots y_{n+1}) = \prod _ {i=1}^{n+1} q(y_i|y_{i-1}) \prod _ {i=1}^n e(x_i|y_i) $<br>注意： $y_0$ 是个开始符号 * ，$y_{n+1}$ 是个结束符号 STOP 。 这两个都不代表某个词性，只表示开始位置和结尾而已。</p>
+<p>举个例子：</p>
+<p>　|　the　|　dog　|　laughs　<br>*　 |　D  　|　N　　|　V　　|STOP<br>那么<br>\begin{align}<br>p(x_1 \ldots x_n,y_1 \ldots y_{n+1}) =&amp; q(D|*) \times q(N|D) \times q (V|N) \times q(STOP|V) \\<br>&amp; \times e(the|D)  \times e(dog|N) \times e(laughs|V)<br>\end{align}<br>==&gt;关于HMM的更详细的解释看<a href="http://www.zhihu.com/question/20962240" target="_blank" rel="external">这里</a>或<a href="http://www.52nlp.cn/hmm-learn-best-practices-one-introduction" target="_blank" rel="external">这里</a></p>
+<p>##Viterbi算法<br>下面来讲一讲Viterbi算法，Viterbi算法是用来求这么多个可能的y，哪个能使 p(y|x) 最大。<br>那么什么是Viterbi算法呢？ 假设我们每天吃三顿饭，每顿饭都有很多种选择，比如说可以选择面包，馒头，米饭，红烧肉，同时，每顿饭的搭配也有它本身的营养价值，比如说中午吃了油荤的，那么晚上吃清淡的就很有营养价值，那么怎么吃才会最有营养价值呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">  早餐         午餐            晚餐</div><div class="line">-------------------------------------------</div><div class="line">  面包（10）   红烧肉（20）    红烧肉（20）</div><div class="line"></div><div class="line">  馒头（5）    白菜（10）      白菜（10）</div><div class="line"></div><div class="line">  香肠（20）   豆腐（10）      豆腐（10）</div><div class="line"></div><div class="line">  鸡蛋（20）   鸡翅（20）      鸡翅（20）</div><div class="line">-------------------------------------------</div></pre></td></tr></table></figure>
+<p>上面的表表示早餐，午餐，晚餐的饭的可选种类，和其代表的营养值。现在，如果设 Y(红烧肉|面包) = 20 表示上一顿是吃的面包，而这一顿吃的是红烧肉的营养价值是10；<br>且所有的 Y(荤菜|素菜) = 20 Y(素菜|荤菜) = 20 Y(荤菜|荤菜) = 10 Y(素菜|素菜) = 10;<br>而假设 Y(面包|无) = 15 Y(馒头|无) = 5 Y(香肠|无) = 10 Y(鸡蛋|无) = 10 表示第一顿选择某些食物的营养值。<br>那么我早餐选择面包的营养值为面包本身的营养加上 Y(面包|无) = 15 的搭配营养，也就是25，并且由于它只有这一种选择，所以<br>maxpre(面包) = 15 + 10 表示上一顿选择面包的一天最大营养值为25。<br>同理<br>maxpre(馒头) = 5 + 5<br>maxpre(香肠) = 20 + 10<br>maxpre(鸡蛋) = 20 + 10；</p>
+<p>如果我中午选择红烧肉的话，那么我可以得到<br>maxpre(红烧肉) = max( 20(红烧肉本身的营养值) + Y(红烧肉|早餐食物种类) + maxpre(早餐食物种类) )；<br>那么有<br>maxpre(红烧肉) = 20 + Y(红烧肉|面包) + maxpre(面包) = 20 + 20 + 25 = 65<br>maxpre(白菜) = 10 + Y(白菜|香肠) + maxpre(香肠) = 10 + 20 + 30 = 60<br>maxpre(豆腐) = 60<br>maxpre(鸡翅) = 65</p>
+<p>而晚饭如果我选红烧肉的话<br>maxpre(红烧肉) = 20 + Y(红烧肉|白菜) + maxpre(白菜) = 20 + 20 + 60 = 100<br>如果选择白菜的话<br>maxpre(白菜) = 10 + Y(白菜|红烧肉) + maxpre(红烧肉) = 95<br>假设所有食物作为最后一顿饭的营养价值都相同，即 Y(END|晚餐食物品种) 相等。</p>
+<p>那么我一天的最佳搭配可以是： 面包 -&gt; 白菜 -&gt; 红烧肉。</p>
+<p>以上用到的想法就是Viterbi算法，即记录上一个选择的最大值，用来估计目前的最大值，同时记录下是上次选择了什么而使得当前的选择最大，在最后得到最大值后回溯，从而的到一个序列，这就是我们要的。</p>
+<p>如何用这个想法进行词性标注呢？</p>
+<p>举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">  the  dog  barks</div><div class="line">---------------------</div><div class="line">  D    D    D      STOP</div><div class="line">  D    D    N      STOP</div><div class="line">  D    D    V      STOP</div><div class="line">  D    N    D      STOP</div><div class="line">  D    N    N      STOP</div><div class="line">  D    N    V      STOP</div><div class="line">  ...</div><div class="line">  V    V    V      STOP</div></pre></td></tr></table></figure>
+<p>假设只有三种词性，有的词性经常在句首出现，有的词性经常在句尾出现，所以要有表示出现在句首句尾的标识。</p>
+<p>那么假设v,w 是代表词性的变量，T表示所有的词性集合，maxpre(k,w)表示句子中第k个词且是w的词性为结尾的序列出现的最大概率，q(v|w) 表示上一个词性为w,而下一个词性为v的概率，e(x_k|v) 表示第k个单词为v词性的概率。</p>
+<p>那么有 </p>
+<p>$maxpre(k,w) = max_{w \in T}(maxpre(k-1,w) \times q(v|w) \times e(x_k|v))$</p>
+<p>* <em>注意:当k = 0 时，即开始时 maxpre(0,STAR) = 1 , T = {STAR} ，当到句子最后一个单词时要有一个特判，即 都要加上 q(END|w) 选出最大值，并回溯出序列</em> </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+          
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Drockser" />
+          <p class="site-author-name" itemprop="name">Drockser</p>
+           
+              <p class="site-description motion-element" itemprop="description">This Web Try explan my work in MT</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Drockser</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
